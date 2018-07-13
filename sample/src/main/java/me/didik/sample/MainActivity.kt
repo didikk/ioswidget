@@ -29,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         btnDialog.setOnClickListener { iosDialog.show() }
 
         val iosLoading = IOSLoading(this, "Download")
-        btnLoading.setOnClickListener { iosLoading.show() }
+        var count = 0
+        btnLoading.setOnClickListener {
+            iosLoading.setTitle("Loading $count")
+            iosLoading.show()
+            count++
+        }
     }
 }

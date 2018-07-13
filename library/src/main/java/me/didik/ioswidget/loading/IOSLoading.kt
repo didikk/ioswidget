@@ -31,4 +31,8 @@ class IOSLoading(context: Context, message: String) : Dialog(context) {
         spinnerAnimation.start()
     }
 
+    fun setTitle(message: String){
+        title?.text = message
+    }
+
 }
